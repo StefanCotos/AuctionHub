@@ -1,6 +1,7 @@
 package org.example.pa_project;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletRequest;
 import org.example.pa_project.Logs.LoggerInfo;
 import org.example.pa_project.entities.Auction;
 import org.example.pa_project.entities.FinalBid;
@@ -32,11 +33,17 @@ public class ServerApp {
     public static LoggerInfo loggerInfo = new LoggerInfo();
     private final RestTemplate restTemplate = new RestTemplate();
     private final JwtService jwtService = new JwtService();
-    private final String uri = "http://localhost:8081/";
+    private  String uri ;
     private static final String UPLOAD_DIR = "src/main/resources/static/images";
+    private String currentUri(String uri,String extension){
+        return uri.substring(0,uri.length()-extension.length());
+    }
 
     @GetMapping("/callGetAuctions")
-    public List<Auction> getAuctions() {
+    public List<Auction> getAuctions(HttpServletRequest request) {
+
+        uri = currentUri(request.getRequestURL().toString(),"/callGetAuctions");
+        System.out.println(uri);
         String newUri = uri + "/auctions";
 
         ResponseEntity<List<Auction>> response = restTemplate.exchange(
@@ -53,7 +60,10 @@ public class ServerApp {
                                              @RequestParam("price") String price,
                                              @RequestParam("deadline") String deadline,
                                              @RequestParam("time") String time,
-                                             @RequestParam("upload-image[]") List<MultipartFile> pictures) {
+                                             @RequestParam("upload-image[]") List<MultipartFile> pictures,
+                                             HttpServletRequest request) {
+        uri = currentUri(request.getRequestURL().toString(),"/auctionsForm");
+        System.out.println(uri);
 
         int auctionId = saveAuction(title, description, price, deadline, time, token);
 
@@ -74,7 +84,7 @@ public class ServerApp {
         auction.setUsersId(userId);
         System.out.println(auction);
 
-        String newUri = uri + "auctions";
+        String newUri = uri + "/auctions";
         System.out.println(newUri);
 
         HttpEntity<Auction> requestEntity = new HttpEntity<>(auction);
@@ -98,7 +108,7 @@ public class ServerApp {
                 image.setAuctionsId(auctionId);
                 image.setExtension(extension);
 
-                String newUri = uri + "imagesDatabase";
+                String newUri = uri + "/imagesDatabase";
                 System.out.println(newUri);
 
                 HttpEntity<Image> requestEntity = new HttpEntity<>(image);
@@ -138,12 +148,15 @@ public class ServerApp {
     }
 
     @PostMapping("/bidsForm")
-    public ResponseEntity<String> addBid(@RequestHeader(name = "Authorization") String token, @RequestBody FinalBid bid) {
+    public ResponseEntity<String> addBid(@RequestHeader(name = "Authorization") String token, @RequestBody FinalBid bid,
+                                         HttpServletRequest request) {
+        uri = currentUri(request.getRequestURL().toString(),"/bidsForm");
+        System.out.println(uri);
         System.out.println(bid);
         int userId = getUserId(token);
         bid.setUsersId(userId);
 
-        String newUri = uri + "bids";
+        String newUri = uri + "/bids";
         System.out.println(newUri);
 
         HttpEntity<FinalBid> requestEntity = new HttpEntity<>(bid);
@@ -157,7 +170,7 @@ public class ServerApp {
         token = token.split(" ")[1];
         String userName = jwtService.extractUsername(token);
 
-        String newNameUri = uri + "users";
+        String newNameUri = uri + "/users";
         System.out.println(newNameUri);
 
         ResponseEntity<List<User>> response = restTemplate.exchange(
@@ -174,7 +187,9 @@ public class ServerApp {
     }
 
     @PutMapping("/callUpdateAuction")
-    public ResponseEntity<String> updateAuction(Auction auction) {
+    public ResponseEntity<String> updateAuction(Auction auction,HttpServletRequest request) {
+        uri = currentUri(request.getRequestURL().toString(),"/callUpdateAuction");
+        System.out.println(uri);
         String newUri = uri + "/auctions";
         HttpEntity<Auction> requestEntity = new HttpEntity<>(auction);
         return restTemplate.exchange(
@@ -184,7 +199,9 @@ public class ServerApp {
     }
 
     @DeleteMapping("/callDeleteAuction")
-    public ResponseEntity<String> deleteAuction(Auction auction) {
+    public ResponseEntity<String> deleteAuction(Auction auction,HttpServletRequest request) {
+        uri = currentUri(request.getRequestURL().toString(),"/callDeleteAuction");
+        System.out.println(uri);
         String newUri = uri + "/auctions";
         HttpEntity<Auction> requestEntity = new HttpEntity<>(auction);
         return restTemplate.exchange(
