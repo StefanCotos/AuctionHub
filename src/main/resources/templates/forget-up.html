@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" vocab="http://schema.org/" typeof="WebPage">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fepa forget username/password page">
+    <meta name="keywords" content="HTML, CSS, JavaScript, forget, username, password, fepa">
+    <meta name="author" content="Tomescu Mircea-Andrei">
+    <meta name="author" content="Burcă Flavian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title property="name">Sign up</title>
+    <link rel="stylesheet" href="/styles/forget-up.css" type="text/css">
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css">
+    <link rel="stylesheet" href="/styles/base.css" type="text/css">
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+<header typeof="WPHeader">
+    <div id="header">
+        <div id="header__img">
+            <a href="/"><img src="/images/new_logo_white.svg" alt="image of the logo"></a>
+        </div>
+
+        <button id="header__menu-button" onclick="toggleDropdown()">
+            Menu
+        </button>
+
+        <nav id="header__nav-bar">
+            <ul id="nav-bar__menu">
+                <li><a class="menu__link" href="/" property="url">Home</a></li>
+                <li><a class="menu__link" href="auction-ma.html" property="url">Auction</a></li>
+                <li><a class="menu__link" href="auctions.html" property="url">Auctions</a></li>
+                <li><a class="menu__link" href="help.html" property="url">Help</a></li>
+                <li>
+                    <a id="verify-user" class="menu__link menu__link--login" href="login.html" property="url">Login</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main typeof="WebPageElement">
+    <div id="background">
+        <div id="container">
+            <h1 property="headline">Forget username</h1>
+            <form id="container__username-form" action="#" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <input type="submit" value="Send">
+            </form>
+            <br>
+            <br>
+            <h1 property="headline">Forget password</h1>
+            <form id="container__password-form" action="#" method="POST">
+                <label for="pass-email">Email:</label>
+                <input type="email" id="pass-email" name="pass-email" required>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer typeof="WPFooter">
+    <div id="footer">
+        <h3>&copy; 2024 Fepa.com</h3>
+        <p>All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="/scripts/nav.js"></script>
+<script src="/scripts/verify-active-user.js"></script>
+
+</body>
+
+</html>

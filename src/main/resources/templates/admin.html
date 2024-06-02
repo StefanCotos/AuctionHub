@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" vocab="http://schema.org/" typeof="WebPage">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fepa admin page">
+    <meta name="keywords" content="HTML, CSS, JavaScript, admin, fepa">
+    <meta name="author" content="Tomescu Mircea-Andrei">
+    <meta name="author" content="Burcă Flavian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title property="name">Fepa</title>
+    <link rel="stylesheet" href="/styles/admin.css" type="text/css">
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css">
+    <link rel="stylesheet" href="/styles/base.css" type="text/css">
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+<header typeof="WPHeader">
+    <div id="header">
+        <div id="header__img">
+            <a href="/"><img src="/images/new_logo_white.svg" alt="Fepa logo" property="logo"></a>
+        </div>
+
+        <button id="header__menu-button" onclick="toggleDropdown()">
+            Menu
+        </button>
+
+        <nav id="header__nav-bar">
+            <ul id="nav-bar__menu">
+                <li><a class="menu__link" href="/" property="url">Home</a></li>
+                <li><a class="menu__link" href="auction-ma.html" property="url">Auction</a></li>
+                <li><a class="menu__link" href="auctions.html" property="url">Auctions</a></li>
+                <li><a class="menu__link" href="help.html" property="url">Help</a></li>
+                <li><a id="verify-user" class="menu__link menu__link--login" href="login.html" property="url">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main typeof="WebPageElement">
+    <div id="container">
+        <h1>Admin Dashboard</h1>
+
+        <section typeof="Table">
+            <h2>Current Users</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Alice Smith</td>
+                    <td>alice@example.com</td>
+                    <td>
+                        <button onclick="alert('Remove user function called for Alice Smith');">
+                            Remove User
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bob Johnson</td>
+                    <td>bob@example.com</td>
+                    <td>
+                        <button onclick="alert('Remove user function called for Bob Johnson');">
+                            Remove User
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section typeof="Table">
+            <h2>Currently Logged Users</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Alice Smith</td>
+                </tr>
+            </table>
+        </section>
+
+        <section typeof="ItemList">
+            <h2>List of auctions by ID</h2>
+            <ul>
+                <li>
+                    auction ID: 101
+                    <button onclick="alert('Remove auction function called for auction id 101');">
+                        Remove auction
+                    </button>
+                </li>
+                <li>
+                    auction ID: 102
+                    <button onclick="alert('Remove auction function called for auction id 102');">
+                        Remove auction
+                    </button>
+                </li>
+                <li>
+                    auction ID: 103
+                    <button onclick="alert('Remove auction function called for auction id 103');">
+                        Remove auction
+                    </button>
+                </li>
+                <li>
+                    auction ID: 104
+                    <button onclick="alert('Remove auction function called for auction id 104');">
+                        Remove auction
+                    </button>
+                </li>
+            </ul>
+        </section>
+    </div>
+</main>
+
+<footer id="footer" typeof="WPFooter">
+    <h3>© 2024 Fepa.com</h3>
+    <p>All rights reserved.</p>
+</footer>
+
+<script src="/scripts/nav.js"></script>
+<script src="/scripts/verify-active-user.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+#header {
+    font-family: "Handlee", cursive;
+    padding: 20px;
+    background-color: #20b2aa;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    box-shadow: 0 3px 10px #005d5d;
+}
+
+@media screen and (max-width: 970px) {
+    #header {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+#header__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header__img img {
+    height: 100px;
+}
+
+#nav-bar__menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-bar__menu li {
+    padding: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    #nav-bar__menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    #nav-bar__menu.show {
+        display: flex;
+    }
+}
+
+.menu__link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1120px) {
+    .menu__link {
+        padding: 7px 15px;
+        text-decoration: none;
+        font-size: 15px;
+    }
+}
+
+.menu__link:hover:not(.menu__link--admin) {
+    background-color: rgb(20, 195, 183);
+    font-weight: bold;
+    color: white;
+    border-radius: 50%;
+}
+
+.menu__link--login {
+    font-weight: bold;
+    color: white;
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+}
+
+.menu__link--admin {
+    background-color: rgb(231, 78, 17);
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.menu__link--admin:hover {
+    background-color: rgb(209, 28, 0);
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+}
+
+#header__menu-button {
+    background-color: #20b2aa;
+    display: none;
+    font-family: "Handlee", cursive;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 800px) {
+    #header__menu-button {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*# sourceMappingURL=nav.css.map */

@@ -1,0 +1,93 @@
+#background {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/background.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    padding: 20px;
+    border: dashed 3px #20b2aa;
+    border-radius: 10%;
+    background-color: white;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px #008080;
+}
+
+#container h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0;
+    font-family: "Handlee", cursive;
+    color: #008080;
+}
+
+#container p {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#container p a {
+    color: #008080;
+    text-decoration: underline;
+}
+
+#container__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+#container__form label {
+    display: block;
+    margin: 10px auto 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#container__form input[type="text"],
+#container__form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#container__form input[type="submit"] {
+    font-weight: bold;
+    font-size: 25px;
+    width: 120px;
+    height: 50px;
+    background-color: rgb(43, 186, 86);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: auto;
+}
+
+#container__form input[type="submit"]:hover {
+    background-color: rgb(166, 66, 66);
+    box-shadow: inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px,
+    inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px,
+    inset rgb(0, 0, 0) 0px 0px 36px -24px;
+}
+
+/*# sourceMappingURL=login.css.map */

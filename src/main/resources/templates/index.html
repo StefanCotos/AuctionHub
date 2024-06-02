@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" vocab="http://schema.org/" typeof="WebPage">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fepa home web page">
+    <meta name="keywords" content="HTML, CSS, JavaScript, homepage, fepa">
+    <meta name="author" content="Tomescu Mircea-Andrei">
+    <meta name="author" content="Burcă Flavian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title property="name">Fepa</title>
+    <link rel="stylesheet" href="/styles/home.css" type="text/css">
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css">
+    <link rel="stylesheet" href="/styles/base.css" type="text/css">
+</head>
+
+<body id="body" vocab="http://schema.org/" typeof="WebPage">
+<header typeof="WPHeader">
+    <div id="header">
+        <div id="header__img">
+            <a href="/"><img src="/images/new_logo_white.svg" alt="image of the logo"></a>
+        </div>
+
+        <button id="header__menu-button" onclick="toggleDropdown()">
+            Menu
+        </button>
+
+        <nav id="header__nav-bar">
+            <ul id="nav-bar__menu">
+                <li><a class="menu__link" href="/" property="url">Home</a></li>
+                <li><a class="menu__link" href="/auction-ma.html" property="url">Auction</a></li>
+                <li><a class="menu__link" href="/auctions.html" property="url">Auctions</a></li>
+                <li><a class="menu__link" href="/contact.html" property="url">Contact</a></li>
+                <li><a class="menu__link" href="/help.html" property="url">Help</a></li>
+                <li><a id="verify-user" class="menu__link menu__link--login" href="/login.html" property="url">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main typeof="WebPageElement">
+    <div id="container">
+        <div id="container__welcome-first">
+            <h1 property="headline">Welcome to the best <em>Auction platform</em> in the world.</h1>
+        </div>
+        <div id="container__welcome-snd">
+            <p property="text">Start auctioning and see current auctions.</p>
+        </div>
+    </div>
+</main>
+
+<footer typeof="WPFooter">
+    <div id="footer">
+        <h3>© 2024 Fepa.com</h3>
+        <p>All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="/scripts/nav.js"></script>
+<script src="/scripts/verify-active-user.js"></script>
+
+</body>
+
+</html>

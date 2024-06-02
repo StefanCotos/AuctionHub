@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+main {
+    display: block;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Handlee", cursive;
+    color: #008080;
+    margin: 20px auto;
+    margin-top: 30px;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Handlee", cursive;
+    color: #008080;
+    margin: 20px auto;
+    margin-top: 30px;
+}
+
+main p {
+    font-size: 20px;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#container__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    width: 90%;
+    height: 100%;
+    align-items: center;
+    place-items: center;
+}
+
+@media screen and (max-width: 825px) {
+    #container__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #container__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid__card {
+    display: flex;
+    width: 90%;
+    aspect-ratio: 6/7;
+    border-radius: 10%;
+    border: dashed 3px #20b2aa;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 3px 10px #008080;
+    flex: 1;
+}
+
+.grid__card h4 {
+    color: #008080;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.card__img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+#map {
+    width: 70%;
+    aspect-ratio: 3/2;
+    margin: 20px auto;
+    margin-bottom: 50px;
+    border: 5px solid #20b2aa;
+}
+
+#filter-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: dashed 3px #20b2aa;
+    box-shadow: 0 3px 10px #008080;
+    border-radius: 10%;
+    text-align: center;
+    margin: 20px auto;
+    width: fit-content;
+    min-width: 270px;
+}
+
+#filter-menu label {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #008080;
+    margin: 10px;
+}
+
+#filter-menu select {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: black;
+    margin: 10px;
+}
+
+#filter-menu button {
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 15px;
+}
+
+#filter-menu__tags-dropdown {
+    display: none;
+}
+
+/*# sourceMappingURL=auctions.css.map */

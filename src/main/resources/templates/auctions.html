@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US" vocab="http://schema.org/" typeof="WebPage">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Fepa missing animals list">
+    <meta name="keywords" content="HTML, CSS, JavaScript, auctions page, auction missing animals list,list, fepa">
+    <meta name="author" content="Tomescu Mircea-Andrei">
+    <meta name="author" content="Burcă Flavian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title property="name">auctions</title>
+    <link rel="stylesheet" href="/styles/base.css" type="text/css">
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css">
+    <link rel="stylesheet" href="/styles/auctions.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+<header typeof="WPHeader">
+    <div id="header">
+        <div id="header__img">
+            <a href="/"><img src="/images/new_logo_white.svg" alt="image of the logo"></a>
+        </div>
+
+        <button id="header__menu-button" onclick="toggleDropdown()">
+            Menu
+        </button>
+
+        <nav id="header__nav-bar">
+            <ul id="nav-bar__menu">
+                <li><a class="menu__link" href="/" property="url">Home</a></li>
+                <li><a class="menu__link" href="auction-ma.html" property="url">Auction</a></li>
+                <li><a class="menu__link" href="auctions.html" property="url">Auctions</a></li>
+                <li><a class="menu__link" href="help.html" property="url">Help</a></li>
+                <li>
+                    <a id="verify-user" class="menu__link menu__link--login" href="login.html" property="url">Login</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main typeof="WebPageElement">
+    <h1 property="headline">Auctions</h1>
+    <h2>These are the items that you can currently bid on:</h2>
+    <h2><em>Click on an auction to find out more!</em></h2>
+    <p>
+        You can also check out <em>your</em> auctions
+        <a id="my-auctions" href="my-auctions.html?">here</a>
+    </p>
+
+<!--    <div id="filter-menu">-->
+<!--        <label for="filter-menu__sort-by">Sort By:</label>-->
+<!--        <select id="filter-menu__sort-by">-->
+<!--            <option value="newest">Newest First</option>-->
+<!--            <option value="oldest">Oldest First</option>-->
+<!--        </select>-->
+<!--    </div>-->
+    <br><br>
+    <div id="container">
+        <div id="container__grid">
+            <script src="/scripts/get-all-auction.js"></script>
+        </div>
+    </div>
+</main>
+
+<footer typeof="WPFooter">
+    <div id="footer">
+        <h3>&copy; 2024 Fepa.com</h3>
+        <p>All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="/scripts/nav.js"></script>
+<script src="/scripts/filter-menu.js"></script>
+<script src="/scripts/login-condition.js"></script>
+<script src="/scripts/verify-active-user.js"></script>
+
+</body>
+
+</html>

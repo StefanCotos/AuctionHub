@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US" vocab="http://schema.org/" typeof="WebPage">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fepa contact">
+    <meta name="keywords" content="HTML, CSS, JavaScript, contact, contact page, fepa">
+    <meta name="author" content="Tomescu Mircea-Andrei">
+    <meta name="author" content="Burcă Flavian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title property="name">Contact</title>
+    <link rel="stylesheet" href="/styles/contact.css" type="text/css">
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css">
+    <link rel="stylesheet" href="/styles/base.css" type="text/css">
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+<header typeof="WPHeader">
+    <div id="header">
+        <div id="header__img">
+            <a href="/"><img src="/images/new_logo_white.svg" alt="image of the logo" property="logo"></a>
+        </div>
+
+        <button id="header__menu-button" onclick="toggleDropdown()">
+            Menu
+        </button>
+
+        <nav id="header__nav-bar">
+            <ul id="nav-bar__menu">
+                <li><a class="menu__link" href="/" property="url">Home</a></li>
+                <li><a class="menu__link" href="auction-ma.html" property="url">Auction</a></li>
+                <li><a class="menu__link" href="auctions.html" property="url">Auctions</a></li>
+                <li><a class="menu__link" href="help.html" property="url">Help</a></li>
+                <li>
+                    <a id="verify-user" class="menu__link menu__link--login" href="login.html" property="url">Login</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main typeof="WebPageElement">
+    <div id="background">
+        <div id="container">
+            <h1>Get in touch</h1>
+            <div id="container__contact-info">
+                <p>Email: contact@example.com</p>
+                <p>Phone: +123456789</p>
+                <p>Address: 123 Main St, City, Country</p>
+            </div>
+            <h2>Send us a message</h2>
+            <form id="container__contact-form" action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer typeof="WPFooter">
+    <div id="footer">
+        <h3>&copy; 2024 Fepa.com</h3>
+        <p>All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="/scripts/nav.js"></script>
+<script src="/scripts/verify-active-user.js"></script>
+
+</body>
+
+</html>

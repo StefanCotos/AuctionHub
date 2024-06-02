@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US" vocab="http://schema.org/" typeof="WebPage">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Fepa animal complet auction">
+    <meta name="keywords" content="HTML, CSS, JavaScript, personal animal page, complet auction page, fepa">
+    <meta name="author" content="Tomescu Mircea-Andrei">
+    <meta name="author" content="Burcă Flavian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title property="name">Auction Info</title>
+    <link rel="stylesheet" href="/styles/base.css" type="text/css">
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css">
+    <link rel="stylesheet" href="/styles/animal.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+<header typeof="WPHeader">
+    <div id="header">
+        <div id="header__img">
+            <a href="/"><img src="/images/new_logo_white.svg" alt="image of the logo" property="logo"></a>
+        </div>
+
+        <button id="header__menu-button" onclick="toggleDropdown()">
+            Menu
+        </button>
+
+        <nav id="header__nav-bar">
+            <ul id="nav-bar__menu">
+                <li><a class="menu__link" href="/" property="url">Home</a></li>
+                <li><a class="menu__link" href="auction-ma.html" property="url">Auction</a></li>
+                <li><a class="menu__link" href="auctions.html" property="url">Auctions</a></li>
+                <li><a class="menu__link" href="help.html" property="url">Help</a></li>
+                <li>
+                    <a id="verify-user" class="menu__link menu__link--login" href="login.html" property="url">Login</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main typeof="WebPageElement">
+    <div id="auction-id"></div>
+    <div id="container">
+        <div id="container__grid">
+            <div id="grid__left-card">
+                <div id="left-card__slideshow-container">
+                    <div id="images-slide"></div>
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+            </div>
+            <div id="grid__right-card1">
+                <script src="/scripts/get-auction-info.js"></script>
+            </div>
+            <div id="grid__right-card2">
+                <form class="form" id="auction-form" action="?action=submitbid" method="POST"
+                      enctype="multipart/form-data">
+                    <label for="bid-amount" class="form__label">Bid amount($)</label><br>
+                    <input type="number" name="bid-amount" id="bid-amount" class="form__input-bid-amount"
+                           required><br><br>
+                    <div id="form__bid-button-container">
+                        <input type="submit" value="Bid" class="form__bid-button">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer typeof="WPFooter">
+    <div id="footer">
+        <h3>&copy; 2024 Fepa.com</h3>
+        <p>All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="/scripts/send-bid-form.js"></script>
+<script src="/scripts/nav.js"></script>
+<script src="/scripts/verify-active-user.js"></script>
+
+</body>
+
+</html>

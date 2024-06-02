@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US" vocab="http://schema.org/" typeof="WebPage">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Fepa auction missing animal">
+    <meta name="keywords" content="HTML, CSS, JavaScript, auction page, auction missing animal, formular, fepa">
+    <meta name="author" content="Tomescu Mircea-Andrei">
+    <meta name="author" content="Burcă Flavian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title property="name">Put a new auction</title>
+    <link rel="stylesheet" href="/styles/auction-ma.css" type="text/css">
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css">
+    <link rel="stylesheet" href="/styles/base.css" type="text/css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+
+<header typeof="WPHeader">
+    <div id="header">
+        <div id="header__img">
+            <a href="/"><img src="/images/new_logo_white.svg" alt="image of the logo"></a>
+        </div>
+
+        <button id="header__menu-button" onclick="toggleDropdown()">
+            Menu
+        </button>
+
+        <nav id="header__nav-bar">
+            <ul id="nav-bar__menu">
+                <li><a class="menu__link" href="/" property="url">Home</a></li>
+                <li><a class="menu__link" href="auction-ma.html" property="url">Auction</a></li>
+                <li><a class="menu__link" href="auctions.html" property="url">Auctions</a></li>
+                <li><a class="menu__link" href="help.html" property="url">Help</a></li>
+                <li>
+                    <a id="verify-user" class="menu__link menu__link--login" href="login.html" property="url">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main typeof="WebPageElement">
+    <div id="background">
+        <div id="container">
+            <section id="container__section">
+                <h1 property="headline">Create a new auction:</h1>
+                <form class="form" id="auction-form"
+                      enctype="multipart/form-data">
+
+                    <label for="title" class="form__label">The item you want to auction:</label><br>
+
+                    <input type="text" name="title" id="title" class="form__input-name" required
+                           autocomplete="additional-name"><br><br>
+
+                    <label for="price" class="form__label">Starting price:</label><br>
+
+                    <input type="number" name="price" id="price" class="form__input-name" required
+                           autocomplete="additional-name"><br><br>
+
+                    <label for="description" class="form__label">Description - be as detailed as you can:</label><br>
+                    <textarea rows="5" cols="60" name="description" id="description" class="form__textarea-description"
+                              required></textarea><br><br>
+
+                    <label for="deadline">Deadline:</label>
+                    <input type="date" id="deadline" name="deadline" class="form__input-name" required><br><br>
+
+                    <label for="time">Choose an ending time of the auction:</label>
+                    <input type="time" id="time" name="time" class="form__input-name" required/>
+                    <br><br>
+
+                    <label for="upload-image" class="form__label">Upload pictures with the item you auction:</label><br>
+                    <input type="file" id="upload-image" name="upload-image[]" accept=".jpg,.png,.jpeg"
+                           class="form__upload-image"
+                           multiple><br><br>
+
+                    <div id="form__submit-button-container">
+                        <input type="submit" value="Submit" class="form__submit-button">
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</main>
+
+<footer typeof="WPFooter">
+    <div id="footer">
+        <h3>&copy; 2024 Fepa.com</h3>
+        <p>All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="/scripts/send-auction-form.js"></script>
+<script src="/scripts/nav.js"></script>
+<script src="/scripts/verify-active-user.js"></script>
+
+</body>
+
+</html>

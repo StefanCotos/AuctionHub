@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US" vocab="http://schema.org/" typeof="WebPage">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fepa login page">
+    <meta name="keywords" content="HTML, CSS, JavaScript, login, fepa">
+    <meta name="author" content="Tomescu Mircea-Andrei">
+    <meta name="author" content="Burcă Flavian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles/login.css" type="text/css">
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css">
+    <link rel="stylesheet" href="/styles/base.css" type="text/css">
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+<header>
+    <div id="header">
+        <div id="header__img">
+            <a href="/"><img src="/images/new_logo_white.svg" alt="image of the logo" property="logo"></a>
+        </div>
+
+        <button id="header__menu-button" onclick="toggleDropdown()">
+            Menu
+        </button>
+
+        <nav id="header__nav-bar">
+            <ul id="nav-bar__menu">
+                <li><a class="menu__link" href="/" property="url">Home</a></li>
+                <li><a class="menu__link" href="auction-ma.html" property="url">Auction</a></li>
+                <li><a class="menu__link" href="auctions.html" property="url">Auctions</a></li>
+                <li><a class="menu__link" href="help.html" property="url">Help</a></li>
+                <li><a id="verify-user" class="menu__link menu__link--login" href="login.html" property="url">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main typeof="WebPageElement">
+    <div id="background">
+        <div id="container">
+            <h1 property="headline">Login</h1>
+            <form id="container__form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <input type="submit" value="Login">
+            </form>
+            <p>
+                <a href="forget-up.html">Forget username or password?</a>
+            </p>
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+    </div>
+</main>
+
+<footer typeof="WPFooter">
+    <div id="footer">
+        <h3>&copy; 2024 Fepa.com</h3>
+        <p>All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="/scripts/send-login-form.js"></script>
+<script src="/scripts/nav.js"></script>
+<script src="/scripts/verify-active-user.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+#background {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images//background.svg"); /* Assuming you have a background image */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%; /* Change to 'cover' for a full background */
+    width: 100%;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: dashed 3px;
+    border-radius: 10%;
+    border-color: #20b2aa;
+    align-items: center;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 3px 10px #008080;
+}
+
+#container h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0;
+    font-family: "Handlee", cursive;
+    color: #008080;
+}
+
+#container h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0;
+    font-family: "Handlee", cursive;
+    color: #008080;
+    margin-bottom: 20px;
+}
+
+#container__contact-info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#container__contact-info p {
+    margin: 5px 0;
+}
+
+#container__contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+#container__contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#container__contact-form input[type="text"],
+#container__contact-form input[type="email"],
+#container__contact-form textarea,
+#container__contact-form input[type="tel"],
+#container__contact-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+
+#container__contact-form textarea {
+    resize: vertical;
+}
+
+#container__contact-form input[type="submit"] {
+    font-weight: bold;
+    font-size: 25px;
+    width: 30%;
+    height: 50px;
+    background-color: rgb(43, 186, 86);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: auto;
+}
+
+#container__contact-form input[type="submit"]:hover {
+    background-color: rgb(166, 66, 66);
+    box-shadow: inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px,
+    inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px,
+    inset rgb(0, 0, 0) 0px 0px 36px -24px;
+}
+
+/*# sourceMappingURL=contact.css.map */

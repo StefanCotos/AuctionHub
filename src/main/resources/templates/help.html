@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US" vocab="http://schema.org/" typeof="WebPage">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fepa help">
+    <meta name="keywords" content="HTML, CSS, JavaScript, help, help page, fepa">
+    <meta name="author" content="Tomescu Mircea-Andrei">
+    <meta name="author" content="Burcă Flavian">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title property="name">Fepa</title>
+    <link rel="stylesheet" href="/styles/help.css" type="text/css">
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css">
+    <link rel="stylesheet" href="/styles/base.css" type="text/css">
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+<header typeof="WPHeader">
+    <div id="header">
+        <div id="header__img">
+            <a href="/"><img src="/images/new_logo_white.svg" alt="image of the logo" property="logo"></a>
+        </div>
+
+        <button id="header__menu-button" onclick="toggleDropdown()">
+            Menu
+        </button>
+
+        <nav id="header__nav-bar">
+            <ul id="nav-bar__menu">
+                <li><a class="menu__link" href="/" property="url">Home</a></li>
+                <li><a class="menu__link" href="auction-ma.html" property="url">Auction</a></li>
+                <li><a class="menu__link" href="auctions.html" property="url">Auctions</a></li>
+                <li><a class="menu__link" href="help.html" property="url">Help</a></li>
+                <li>
+                    <a id="verify-user" class="menu__link menu__link--login" href="login.html" property="url">Login</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main typeof="WebPageElement">
+    <div id="background">
+        <div id="container">
+            <h1 property="headline">Auctioning objects from around the house to get some extra money.</h1>
+
+            <p property="text">
+                This section provides information on how to effectively auction an
+                object that you no longer want to have.
+            </p>
+
+            <section typeof="ItemList">
+                <h2 property="headline">What to auction</h2>
+
+                <ul>
+                    <li> Valuable items that you want to obtain money on.</li>
+                    <li> Objects that you no longer want to have in your house.</li>
+                    <li> Objects bought that you don't like.</li>
+                    <li> Any other type of object that you want to sell.</li>
+                </ul>
+            </section>
+            <section typeof="ItemList">
+                <h2>What Information to Include</h2>
+
+                <ul>
+                    <li>The title of the auction.</li>
+                    <li>
+                        The price you want to obtain for the object (minimum price).
+                    </li>
+                    <li> A large description for your auction.</li>
+                    <li>
+                        The day when the auction will end (the auction will be active
+                        until that day).
+                    </li>
+                    <li>
+                        The time when the auction will end (the auction will be active
+                        until that time).
+                    </li>
+                </ul>
+            </section>
+            <section typeof="ItemList">
+                <h2>How to auction</h2>
+
+                <ul>
+                    <li>
+                        Visit our <a href="auction-ma.html">auction</a> section and fill out
+                        the online form.
+                    </li>
+                    <li>
+                        You can also call us directly at [phone number] (during business
+                        hours).
+                    </li>
+                </ul>
+            </section>
+            <br>
+            <section>
+                <h3>
+                    Our website offers additional resources that you may find helpful:
+                </h3>
+
+                <ul>
+                    <li>
+                        See real-time auctions (<a
+                            href="auctions.html">auctions</a>).
+                    </li>
+                </ul>
+            </section>
+            <p id="container__bottom-message" property="text">
+                We are very happy to have you as a customer and if there is anything that we can improve please contact us and let us know what we can do better.
+            </p>
+        </div>
+    </div>
+</main>
+
+<footer typeof="WPFooter">
+    <div id="footer">
+        <h3>&copy; 2024 Fepa.com</h3>
+        <p>All rights reserved.</p>
+    </div>
+</footer>
+<script src="/scripts/nav.js"></script>
+<script src="/scripts/verify-active-user.js"></script>
+
+</body>
+
+</html>
