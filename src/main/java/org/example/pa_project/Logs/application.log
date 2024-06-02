@@ -2,92 +2,199 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 </log>
-onfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-02T13:29:23.330+03:00  INFO 41644 --- [PA_Project] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-06-02T13:29:23.719+03:00  INFO 41644 --- [PA_Project] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-06-02T13:29:23.824+03:00  INFO 41644 --- [PA_Project] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@31a2b0b7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43f04613, org.springframework.security.web.context.SecurityContextHolderFilter@1239b9a6, org.springframework.security.web.header.HeaderWriterFilter@7544e69d, org.springframework.web.filter.CorsFilter@6cfe5b61, org.springframework.security.web.authentication.logout.LogoutFilter@7bafba79, org.example.pa_project.security.JwtAuthenticationFilter@562dca21, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53a9712, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@20f05e55, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@607fc138, org.springframework.security.web.session.SessionManagementFilter@29607ba0, org.springframework.security.web.access.ExceptionTranslationFilter@66b3bad, org.springframework.security.web.access.intercept.AuthorizationFilter@6324337b]
-2024-06-02T13:29:24.605+03:00  INFO 41644 --- [PA_Project] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-06-02T13:29:24.707+03:00  INFO 41644 --- [PA_Project] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2024-06-02T13:29:24.710+03:00  INFO 41644 --- [PA_Project] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
-2024-06-02T13:29:24.711+03:00  INFO 41644 --- [PA_Project] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@265d52cb]]
-2024-06-02T13:29:24.712+03:00  INFO 41644 --- [PA_Project] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
-2024-06-02T13:29:24.730+03:00  INFO 41644 --- [PA_Project] [restartedMain] o.e.pa_project.PaProjectApplication      : Started PaProjectApplication in 8.419 seconds (process running for 9.488)
-2024-06-02T13:29:31.747+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-06-02T13:29:31.748+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-06-02T13:29:31.751+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2024-06-02T13:29:31.802+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET / from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.096+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.096+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.096+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.097+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/home.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.098+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.098+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.121+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.134+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/background.svg from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.942+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /login.html from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.989+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/login.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.992+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.992+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.993+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/send-login-form.js from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:32.995+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:33.009+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:33.011+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:33.019+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:33.019+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/background.svg from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:35.255+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: POST /login from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:35.610+03:00 DEBUG 41644 --- [PA_Project] [http-nio-8081-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.username=?
-2024-06-02T13:29:35.746+03:00 DEBUG 41644 --- [PA_Project] [http-nio-8081-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.username=?
-2024-06-02T13:29:37.908+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET / from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:37.952+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/home.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:37.952+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:37.953+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:37.952+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:37.953+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:37.956+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:37.964+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:37.976+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/background.svg from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:38.585+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /auction-ma.html from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:38.636+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:38.636+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:38.636+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/auction-ma.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:38.636+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:38.638+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/send-auction-form.js from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:38.639+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:38.651+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:38.651+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:38.657+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/background.svg from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:56.306+03:00 DEBUG 41644 --- [PA_Project] [http-nio-8081-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.username=?
-2024-06-02T13:29:56.311+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: POST /auctionsForm from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:56.423+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /users from 127.0.0.1
-2024-06-02T13:29:56.439+03:00 DEBUG 41644 --- [PA_Project] [http-nio-8081-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0
-2024-06-02T13:29:56.485+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: POST /auctions from 127.0.0.1
-2024-06-02T13:29:56.516+03:00 DEBUG 41644 --- [PA_Project] [http-nio-8081-exec-10] org.hibernate.SQL                        : insert into auctions (deadline,description,initial_price,time,title,users_id) values (?,?,?,?,?,?)
-2024-06-02T13:29:56.582+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: POST /imagesDatabase from 127.0.0.1
-2024-06-02T13:29:56.586+03:00 DEBUG 41644 --- [PA_Project] [http-nio-8081-exec-5] org.hibernate.SQL                        : insert into images (auctions_id,extension) values (?,?)
-2024-06-02T13:29:56.600+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /imagesDatabase from 127.0.0.1
-2024-06-02T13:29:56.603+03:00 DEBUG 41644 --- [PA_Project] [http-nio-8081-exec-6] org.hibernate.SQL                        : select i1_0.id,i1_0.auctions_id,i1_0.extension from images i1_0
-2024-06-02T13:29:56.629+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: POST /imagesDatabase from 127.0.0.1
-2024-06-02T13:29:56.631+03:00 DEBUG 41644 --- [PA_Project] [http-nio-8081-exec-9] org.hibernate.SQL                        : insert into images (auctions_id,extension) values (?,?)
-2024-06-02T13:29:56.639+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /imagesDatabase from 127.0.0.1
-2024-06-02T13:29:56.642+03:00 DEBUG 41644 --- [PA_Project] [http-nio-8081-exec-8] org.hibernate.SQL                        : select i1_0.id,i1_0.auctions_id,i1_0.extension from images i1_0
-2024-06-02T13:29:56.660+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: POST /imagesDatabase from 127.0.0.1
-2024-06-02T13:29:56.663+03:00 DEBUG 41644 --- [PA_Project] [http-nio-8081-exec-1] org.hibernate.SQL                        : insert into images (auctions_id,extension) values (?,?)
-2024-06-02T13:29:56.671+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /imagesDatabase from 127.0.0.1
-2024-06-02T13:29:56.674+03:00 DEBUG 41644 --- [PA_Project] [http-nio-8081-exec-2] org.hibernate.SQL                        : select i1_0.id,i1_0.auctions_id,i1_0.extension from images i1_0
-2024-06-02T13:29:58.710+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /auction-ma.html from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:58.756+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/auction-ma.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:58.756+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:58.756+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:58.755+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:58.762+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/send-auction-form.js from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:58.762+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:58.765+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:58.769+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
-2024-06-02T13:29:58.777+03:00  INFO 41644 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/background.svg from 0:0:0:0:0:0:0:1
-2024-06-02T13:30:24.637+03:00  INFO 41644 --- [PA_Project] [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
-2024-06-02T13:30:33.998+03:00  INFO 41644 --- [PA_Project] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
-2024-06-02T13:30:33.999+03:00  INFO 41644 --- [PA_Project] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@265d52cb]]
-2024-06-02T13:30:33.999+03:00  INFO 41644 --- [PA_Project] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
-2024-06-02T13:30:34.012+03:00  INFO 41644 --- [PA_Project] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-06-02T13:30:34.018+03:00  INFO 41644 --- [PA_Project] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-06-02T13:30:34.051+03:00  INFO 41644 --- [PA_Project] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+nfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-02T14:28:40.495+03:00  INFO 2140 --- [PA_Project] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-06-02T14:28:40.868+03:00  INFO 2140 --- [PA_Project] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-06-02T14:28:40.964+03:00  INFO 2140 --- [PA_Project] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@13a3c6f8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f972cc6, org.springframework.security.web.context.SecurityContextHolderFilter@2065dd68, org.springframework.security.web.header.HeaderWriterFilter@7d61e8c6, org.springframework.web.filter.CorsFilter@4aab058a, org.springframework.security.web.authentication.logout.LogoutFilter@61d62acc, org.example.pa_project.security.JwtAuthenticationFilter@4bc80c55, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a994430, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3612c474, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@298d8ae1, org.springframework.security.web.session.SessionManagementFilter@1320861d, org.springframework.security.web.access.ExceptionTranslationFilter@7f2fe56e, org.springframework.security.web.access.intercept.AuthorizationFilter@2ae1ffb1]
+2024-06-02T14:28:41.758+03:00  INFO 2140 --- [PA_Project] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-06-02T14:28:41.848+03:00  INFO 2140 --- [PA_Project] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-06-02T14:28:41.850+03:00  INFO 2140 --- [PA_Project] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2024-06-02T14:28:41.851+03:00  INFO 2140 --- [PA_Project] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2da531ec]]
+2024-06-02T14:28:41.851+03:00  INFO 2140 --- [PA_Project] [restartedMain] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2024-06-02T14:28:41.868+03:00  INFO 2140 --- [PA_Project] [restartedMain] o.e.pa_project.PaProjectApplication      : Started PaProjectApplication in 7.712 seconds (process running for 8.567)
+2024-06-02T14:28:42.218+03:00  INFO 2140 --- [PA_Project] [RMI TCP Connection(3)-192.168.50.129] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-02T14:28:42.219+03:00  INFO 2140 --- [PA_Project] [RMI TCP Connection(3)-192.168.50.129] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-02T14:28:42.222+03:00  INFO 2140 --- [PA_Project] [RMI TCP Connection(3)-192.168.50.129] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-06-02T14:29:15.361+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET / from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:15.647+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/home.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:15.666+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:15.666+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:15.666+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:15.666+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:15.669+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:15.678+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:15.710+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/background.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:16.164+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /auction-ma.html from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:16.208+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/auction-ma.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:16.225+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:16.225+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:16.225+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:16.227+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:16.227+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/send-auction-form.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:16.234+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:16.237+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:16.257+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/background.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:17.997+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /auctions.html from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.033+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.054+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.054+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.055+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/auctions.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.056+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.058+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/get-all-auction.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.088+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.094+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/filter-menu.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.099+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.099+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/login-condition.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.121+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /auctions from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.136+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /ws/info from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.153+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /ws/818/qsb5ggzc/websocket from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.302+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-8] org.hibernate.SQL                        : select a1_0.id,a1_0.deadline,a1_0.description,a1_0.initial_price,a1_0.time,a1_0.title,a1_0.users_id from auctions a1_0
+2024-06-02T14:29:18.349+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /imagesDatabase/auctions_id/1 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.382+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-5] org.hibernate.SQL                        : select i1_0.id,i1_0.auctions_id,i1_0.extension from images i1_0 where i1_0.auctions_id=?
+2024-06-02T14:29:18.396+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /bids/auctions_id/1 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.396+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/1.jpg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.401+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-10] org.hibernate.SQL                        : select fb1_0.id,fb1_0.auctions_id,fb1_0.price,fb1_0.users_id from final_bids fb1_0 where fb1_0.auctions_id=?
+2024-06-02T14:29:18.415+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /users/1 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.430+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.id=?
+2024-06-02T14:29:18.445+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /imagesDatabase/auctions_id/5 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.450+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-1] org.hibernate.SQL                        : select i1_0.id,i1_0.auctions_id,i1_0.extension from images i1_0 where i1_0.auctions_id=?
+2024-06-02T14:29:18.461+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /bids/auctions_id/5 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.461+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/3.jpg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.463+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-3] org.hibernate.SQL                        : select fb1_0.id,fb1_0.auctions_id,fb1_0.price,fb1_0.users_id from final_bids fb1_0 where fb1_0.auctions_id=?
+2024-06-02T14:29:18.474+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /users/2 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.477+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.id=?
+2024-06-02T14:29:18.488+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /imagesDatabase/auctions_id/6 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.494+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-6] org.hibernate.SQL                        : select i1_0.id,i1_0.auctions_id,i1_0.extension from images i1_0 where i1_0.auctions_id=?
+2024-06-02T14:29:18.507+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /bids/auctions_id/6 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.507+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/6.jpg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.510+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-8] org.hibernate.SQL                        : select fb1_0.id,fb1_0.auctions_id,fb1_0.price,fb1_0.users_id from final_bids fb1_0 where fb1_0.auctions_id=?
+2024-06-02T14:29:18.525+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /users/3 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.529+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.id=?
+2024-06-02T14:29:18.542+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /imagesDatabase/auctions_id/7 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.546+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-10] org.hibernate.SQL                        : select i1_0.id,i1_0.auctions_id,i1_0.extension from images i1_0 where i1_0.auctions_id=?
+2024-06-02T14:29:18.558+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/8.jpeg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.558+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /bids/auctions_id/7 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.562+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-7] org.hibernate.SQL                        : select fb1_0.id,fb1_0.auctions_id,fb1_0.price,fb1_0.users_id from final_bids fb1_0 where fb1_0.auctions_id=?
+2024-06-02T14:29:18.575+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /users/1 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.578+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.id=?
+2024-06-02T14:29:18.588+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /imagesDatabase/auctions_id/8 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.590+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-3] org.hibernate.SQL                        : select i1_0.id,i1_0.auctions_id,i1_0.extension from images i1_0 where i1_0.auctions_id=?
+2024-06-02T14:29:18.599+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /bids/auctions_id/8 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.599+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/10.jpeg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.602+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-2] org.hibernate.SQL                        : select fb1_0.id,fb1_0.auctions_id,fb1_0.price,fb1_0.users_id from final_bids fb1_0 where fb1_0.auctions_id=?
+2024-06-02T14:29:18.611+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /users/4 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:18.612+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.id=?
+2024-06-02T14:29:20.350+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /help.html from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:20.391+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/help.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:20.415+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:20.415+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:20.415+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:20.415+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:20.415+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:20.419+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:20.443+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/background.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:22.870+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /login.html from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:22.906+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/login.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:22.928+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:22.928+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:22.928+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:22.928+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:22.928+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/send-login-form.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:22.928+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:22.936+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:22.955+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/background.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:24.246+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /signup.html from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:24.289+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/signup.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:24.305+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:24.305+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:24.307+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:24.310+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:24.310+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/send-signup-form.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:24.317+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:24.319+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:24.345+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/background.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:25.839+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET / from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:25.874+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/home.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:25.895+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:25.895+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:25.897+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:25.897+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:25.897+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:25.904+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:25.925+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/background.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.201+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /auction-ma.html from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.237+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/auction-ma.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.256+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.256+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.256+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/send-auction-form.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.257+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.257+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.257+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.264+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.285+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/background.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.839+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /auctions.html from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.870+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.889+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.889+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.888+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.889+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/auctions.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.892+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/get-all-auction.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.911+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.916+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/filter-menu.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.919+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/login-condition.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.920+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.940+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /auctions from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.943+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-10] org.hibernate.SQL                        : select a1_0.id,a1_0.deadline,a1_0.description,a1_0.initial_price,a1_0.time,a1_0.title,a1_0.users_id from auctions a1_0
+2024-06-02T14:29:31.954+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /ws/info from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.959+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /imagesDatabase/auctions_id/1 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.961+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /ws/235/ai0rmpuw/websocket from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.962+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-6] org.hibernate.SQL                        : select i1_0.id,i1_0.auctions_id,i1_0.extension from images i1_0 where i1_0.auctions_id=?
+2024-06-02T14:29:31.970+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/1.jpg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.970+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /bids/auctions_id/1 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.973+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-2] org.hibernate.SQL                        : select fb1_0.id,fb1_0.auctions_id,fb1_0.price,fb1_0.users_id from final_bids fb1_0 where fb1_0.auctions_id=?
+2024-06-02T14:29:31.987+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /users/1 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:31.990+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.id=?
+2024-06-02T14:29:32.001+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /imagesDatabase/auctions_id/5 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.004+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-10] org.hibernate.SQL                        : select i1_0.id,i1_0.auctions_id,i1_0.extension from images i1_0 where i1_0.auctions_id=?
+2024-06-02T14:29:32.011+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /bids/auctions_id/5 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.011+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/3.jpg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.015+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-7] org.hibernate.SQL                        : select fb1_0.id,fb1_0.auctions_id,fb1_0.price,fb1_0.users_id from final_bids fb1_0 where fb1_0.auctions_id=?
+2024-06-02T14:29:32.023+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /users/2 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.025+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.id=?
+2024-06-02T14:29:32.034+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /imagesDatabase/auctions_id/6 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.036+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-6] org.hibernate.SQL                        : select i1_0.id,i1_0.auctions_id,i1_0.extension from images i1_0 where i1_0.auctions_id=?
+2024-06-02T14:29:32.044+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /bids/auctions_id/6 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.044+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/6.jpg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.047+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-8] org.hibernate.SQL                        : select fb1_0.id,fb1_0.auctions_id,fb1_0.price,fb1_0.users_id from final_bids fb1_0 where fb1_0.auctions_id=?
+2024-06-02T14:29:32.057+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-5] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /users/3 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.060+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-5] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.id=?
+2024-06-02T14:29:32.072+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /imagesDatabase/auctions_id/7 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.074+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-2] org.hibernate.SQL                        : select i1_0.id,i1_0.auctions_id,i1_0.extension from images i1_0 where i1_0.auctions_id=?
+2024-06-02T14:29:32.084+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/8.jpeg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.084+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /bids/auctions_id/7 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.086+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-10] org.hibernate.SQL                        : select fb1_0.id,fb1_0.auctions_id,fb1_0.price,fb1_0.users_id from final_bids fb1_0 where fb1_0.auctions_id=?
+2024-06-02T14:29:32.096+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /users/1 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.099+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-1] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.id=?
+2024-06-02T14:29:32.107+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /imagesDatabase/auctions_id/8 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.109+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-7] org.hibernate.SQL                        : select i1_0.id,i1_0.auctions_id,i1_0.extension from images i1_0 where i1_0.auctions_id=?
+2024-06-02T14:29:32.117+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/10.jpeg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.117+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /bids/auctions_id/8 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.119+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-6] org.hibernate.SQL                        : select fb1_0.id,fb1_0.auctions_id,fb1_0.price,fb1_0.users_id from final_bids fb1_0 where fb1_0.auctions_id=?
+2024-06-02T14:29:32.126+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /users/4 from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:32.128+03:00 DEBUG 2140 --- [PA_Project] [http-nio-8081-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.password,u1_0.username from users u1_0 where u1_0.id=?
+2024-06-02T14:29:33.964+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-8] o.e.p.Logs.RequestLoggingFilter          : Received request: GET / from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:33.999+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-2] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/home.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:34.018+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-10] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/footer.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:34.018+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-4] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/nav.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:34.019+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-3] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/nav.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:34.019+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-7] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/new_logo_white.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:34.020+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-1] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /styles/base.css from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:34.020+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-6] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /scripts/verify-active-user.js from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:34.047+03:00  INFO 2140 --- [PA_Project] [http-nio-8081-exec-9] o.e.p.Logs.RequestLoggingFilter          : Received request: GET /images/background.svg from 0:0:0:0:0:0:0:1
+2024-06-02T14:29:41.797+03:00  INFO 2140 --- [PA_Project] [MessageBroker-6] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 2 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(2)-CONNECTED(2)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 18, active threads = 0, queued tasks = 0, completed tasks = 18], outboundChannel[pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 4], sockJsScheduler[pool size = 11, active threads = 1, queued tasks = 1, completed tasks = 5]
+2024-06-02T14:29:47.586+03:00  INFO 2140 --- [PA_Project] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopping...
+2024-06-02T14:29:47.587+03:00  INFO 2140 --- [PA_Project] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2da531ec]]
+2024-06-02T14:29:47.587+03:00  INFO 2140 --- [PA_Project] [SpringApplicationShutdownHook] o.s.m.s.b.SimpleBrokerMessageHandler     : Stopped.
+2024-06-02T14:29:47.601+03:00  INFO 2140 --- [PA_Project] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-02T14:29:47.605+03:00  INFO 2140 --- [PA_Project] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-02T14:29:47.615+03:00  INFO 2140 --- [PA_Project] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
