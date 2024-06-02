@@ -13,7 +13,7 @@ document.getElementById('container__form').addEventListener('submit', async func
     };
 
     try {
-        const response = await fetch('http://localhost:8081/login', {
+        const response = await fetch(window.location.origin+'/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -16,7 +16,7 @@ document.getElementById('auction-form').addEventListener('submit', async functio
         };
 
         try {
-            const response = await fetch('http://localhost:8081/bidsForm', {
+            const response = await fetch(window.location.origin+'/bidsForm', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

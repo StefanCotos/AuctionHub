@@ -19,7 +19,7 @@ document.getElementById('auction-form').addEventListener('submit', async functio
         const formData = new FormData(form);
 
         try {
-            const response = await fetch('http://localhost:8081/auctionsForm', {
+            const response = await fetch(window.location.origin+'/auctionsForm', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${sessionStorage.getItem("token")}`

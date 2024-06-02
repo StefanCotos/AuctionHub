@@ -1,6 +1,6 @@
 async function fetchAuctions() {
     try {
-        const response = await fetch(`http://localhost:8081/auctions/users_id/${await getId(sessionStorage.getItem("username"))}`);
+        const response = await fetch(window.location.origin+`/auctions/users_id/${await getId(sessionStorage.getItem("username"))}`);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -25,7 +25,7 @@ async function fetchAuctions() {
 }
 
 async function getId(username) {
-    const response = await fetch(`http://localhost:8081/users/username/${username}`);
+    const response = await fetch(window.location.origin+`/users/username/${username}`);
     if (response.ok) {
         const user = await response.json();
         return user.id;

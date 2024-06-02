@@ -1,6 +1,6 @@
 async function fetchAuctions() {
     try {
-        const response = await fetch('http://localhost:8081/auctions');
+        const response = await fetch(window.location.origin+'/auctions');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -51,7 +51,7 @@ async function fetchAuctions() {
 
 async function getBid(id) {
     try {
-        const response = await fetch(`http://localhost:8081/bids/auctions_id/${id}`);
+        const response = await fetch(window.location.origin+`/bids/auctions_id/${id}`);
         if (response.ok) {
             const bid = await response.json();
             return bid.price;
@@ -64,7 +64,7 @@ async function getBid(id) {
 }
 
 async function getUsername(id) {
-    const response = await fetch(`http://localhost:8081/users/${id}`);
+    const response = await fetch(window.location.origin+`/users/${id}`);
     if (response.ok) {
         const user = await response.json();
         return user.username;
@@ -75,7 +75,7 @@ async function getUsername(id) {
 
 async function getPhoto(id) {
     try {
-        const response = await fetch(`http://localhost:8081/imagesDatabase/auctions_id/${id}`);
+        const response = await fetch(window.location.origin+`/imagesDatabase/auctions_id/${id}`);
         if (response.ok) {
             let image = await response.json();
             image = image[0];
