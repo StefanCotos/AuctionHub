@@ -55,7 +55,7 @@ public class SecurityConfig {
                                 .permitAll()
                                 .requestMatchers("/auctionsForm/**")
                                 .permitAll()
-                                .requestMatchers("/resources/**", "/styles/**", "/images/**", "/scripts/**", "/ws/**", "/callGetAuctions")
+                                .requestMatchers("/logger/**","/resources/**", "/styles/**", "/images/**", "/scripts/**", "/ws/**", "/callGetAuctions")
                                 .permitAll()
                                 .anyRequest()
                                 .authenticated()
