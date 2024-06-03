@@ -29,8 +29,8 @@ public class CloudinaryUploader {
             Map options = ObjectUtils.asMap("public_id", publicId);
             Map uploadResult = cloudinary.uploader().upload(fileBytes, options);
 
-            System.out.println("Successfully uploaded file: " + uploadResult.get("url"));
-            return uploadResult.get("url").toString();
+            System.out.println("Successfully uploaded file: " + uploadResult.get("secure_url"));
+            return uploadResult.get("secure_url").toString();
         } catch (IOException e) {
             e.printStackTrace();
             System.err.println("Failed to upload file to Cloudinary: " + e.getMessage());
@@ -40,7 +40,7 @@ public class CloudinaryUploader {
 
 //    public static void main(String[] args) throws IOException {
 //        CloudinaryUploader uploader = new CloudinaryUploader();
-//        File file = new File("src/main/resources/static/images/null.jpg");
+//        File file = new File("D:/Temporary Files/null.jpg");
 //        byte[] fileBytes = FileUtils.readFileToByteArray(file);
 //        String imageUrl = uploader.uploadFile(fileBytes, "test");
 //        System.out.println("Image URL: " + imageUrl);

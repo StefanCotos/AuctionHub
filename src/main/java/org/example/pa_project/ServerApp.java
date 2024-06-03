@@ -65,11 +65,11 @@ public class ServerApp {
 
         int auctionId = saveAuction(title, description, price, deadline, time, token);
 
-        if (pictures.size()>1) {
+        if (pictures.size() == 1 && pictures.getFirst().isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        } else {
             return saveImages(pictures, auctionId);
         }
-        return new ResponseEntity<>(HttpStatus.CREATED);
-        // Handle file uploads
     }
 
     private int saveAuction(String title, String description, String price, String deadline, String time, String token) {
