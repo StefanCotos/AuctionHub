@@ -32,7 +32,9 @@
                 <li><a class="menu__link" href="auction-ma.html" property="url">Auction</a></li>
                 <li><a class="menu__link" href="auctions.html" property="url">Auctions</a></li>
                 <li><a class="menu__link" href="help.html" property="url">Help</a></li>
-                <li><a id="verify-user" class="menu__link menu__link--login" href="login.html" property="url">Login</a></li>
+                <li><a id="verify-user" class="menu__link menu__link--login" href="login.html" property="url">Login</a>
+                </li>
+                <li><a id="admin-permission" href="admin.html" property="url">Admin dashboard</a></li>
             </ul>
         </nav>
     </div>
@@ -45,76 +47,16 @@
         <section typeof="Table">
             <h2>Current Users</h2>
             <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Action</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Alice Smith</td>
-                    <td>alice@example.com</td>
-                    <td>
-                        <button onclick="alert('Remove user function called for Alice Smith');">
-                            Remove User
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Bob Johnson</td>
-                    <td>bob@example.com</td>
-                    <td>
-                        <button onclick="alert('Remove user function called for Bob Johnson');">
-                            Remove User
-                        </button>
-                    </td>
-                </tr>
-            </table>
-        </section>
-
-        <section typeof="Table">
-            <h2>Currently Logged Users</h2>
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Alice Smith</td>
-                </tr>
+                <div id="all-users">
+                </div>
             </table>
         </section>
 
         <section typeof="ItemList">
             <h2>List of auctions by ID</h2>
             <ul>
-                <li>
-                    auction ID: 101
-                    <button onclick="alert('Remove auction function called for auction id 101');">
-                        Remove auction
-                    </button>
-                </li>
-                <li>
-                    auction ID: 102
-                    <button onclick="alert('Remove auction function called for auction id 102');">
-                        Remove auction
-                    </button>
-                </li>
-                <li>
-                    auction ID: 103
-                    <button onclick="alert('Remove auction function called for auction id 103');">
-                        Remove auction
-                    </button>
-                </li>
-                <li>
-                    auction ID: 104
-                    <button onclick="alert('Remove auction function called for auction id 104');">
-                        Remove auction
-                    </button>
-                </li>
+                <div id="all-auctions">
+                </div>
             </ul>
         </section>
     </div>
@@ -125,6 +67,8 @@
     <p>All rights reserved.</p>
 </footer>
 
+<script src="/scripts/admin-management.js"></script>
+<script src="/scripts/logout-condition.js"></script>
 <script src="/scripts/nav.js"></script>
 <script src="/scripts/verify-active-user.js"></script>
 
