@@ -17,13 +17,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Comparator;
 import java.util.List;
+
 
 // dump comment
 @RestController
@@ -33,16 +30,17 @@ public class ServerApp {
     public static LoggerInfo loggerInfo = new LoggerInfo();
     private final RestTemplate restTemplate = new RestTemplate();
     private final JwtService jwtService = new JwtService();
-    private  String uri ;
+    private String uri;
     private static final String UPLOAD_DIR = "src/main/resources/static/images";
-    private String currentUri(String uri,String extension){
-        return uri.substring(0,uri.length()-extension.length());
+
+    private String currentUri(String uri, String extension) {
+        return uri.substring(0, uri.length() - extension.length());
     }
 
     @GetMapping("/callGetAuctions")
     public List<Auction> getAuctions(HttpServletRequest request) {
 
-        uri = currentUri(request.getRequestURL().toString(),"/callGetAuctions");
+        uri = currentUri(request.getRequestURL().toString(), "/callGetAuctions");
         System.out.println(uri);
         String newUri = uri + "/auctions";
 
@@ -62,13 +60,15 @@ public class ServerApp {
                                              @RequestParam("time") String time,
                                              @RequestParam("upload-image[]") List<MultipartFile> pictures,
                                              HttpServletRequest request) {
-        uri = currentUri(request.getRequestURL().toString(),"/auctionsForm");
+        uri = currentUri(request.getRequestURL().toString(), "/auctionsForm");
         System.out.println(uri);
 
         int auctionId = saveAuction(title, description, price, deadline, time, token);
 
-
-        return saveImages(pictures, auctionId);
+        if (pictures.size()>1) {
+            return saveImages(pictures, auctionId);
+        }
+        return new ResponseEntity<>(HttpStatus.CREATED);
         // Handle file uploads
     }
 
@@ -96,20 +96,19 @@ public class ServerApp {
     }
 
     private ResponseEntity<String> saveImages(List<MultipartFile> pictures, int auctionId) {
-
         for (MultipartFile picture : pictures) {
             try {
-                // Save the file somewhere
-                byte[] bytes = picture.getBytes();
-                String extension = picture.getContentType().split("/")[1];
-                System.out.println(extension);
+
+//                Save the file somewhere
+//                byte[] bytes = picture.getBytes();
+//                String extension = picture.getContentType().split("/")[1];
+//                System.out.println(extension);
 
                 Image image = new Image();
                 image.setAuctionsId(auctionId);
-                image.setExtension(extension);
+                image.setExtension("");
 
                 String newUri = uri + "/imagesDatabase";
-                System.out.println(newUri);
 
                 HttpEntity<Image> requestEntity = new HttpEntity<>(image);
                 ResponseEntity<Image> responseEntityImage = restTemplate.exchange(
@@ -123,21 +122,38 @@ public class ServerApp {
                 List<Image> images = responseEntity.getBody();
 
                 int imageId = images.stream()
-                        .filter(i -> i.getAuctionsId() == auctionId)
+                        .filter(counter -> counter.getAuctionsId() == auctionId)
                         .map(Image::getId)
                         .sorted(Comparator.reverseOrder())
                         .findFirst()
                         .orElse(-1);
+                System.out.println(imageId);
 
-                Path filePath = Paths.get(UPLOAD_DIR, "/" + String.valueOf(imageId) + "." + extension);
-                System.out.println("*" + filePath.toString() + "*");
+                CloudinaryUploader uploader = new CloudinaryUploader();
 
-                File imageFile = new File(filePath.toString());
-                imageFile.createNewFile();
-                Files.write(filePath, picture.getBytes());
+                String imageUrl = uploader.uploadFile(picture.getBytes(), String.valueOf(imageId));
+                System.out.println("Image URL: " + imageUrl);
 
-                // Use bytes and fileName as needed (e.g., save to the database or filesystem)
-                // System.out.println("Received picture: " + fileName + " (" + bytes.length + " bytes)");
+                image.setExtension(imageUrl);
+
+                newUri = newUri + "/" + imageId;
+
+                HttpEntity<Image> requestEntity1 = new HttpEntity<>(image);
+                ResponseEntity<Image> responseEntityImage1 = restTemplate.exchange(
+                        newUri, HttpMethod.PUT, requestEntity1,
+                        new ParameterizedTypeReference<>() {
+                        });
+
+//                Path filePath = Paths.get(UPLOAD_DIR, "/" + String.valueOf(imageId) + "." + extension);
+//                System.out.println("*" + filePath.toString() + "*");
+//
+//                File imageFile = new File(filePath.toString());
+//                imageFile.createNewFile();
+//                Files.write(filePath, picture.getBytes());
+//
+//                // Use bytes and fileName as needed (e.g., save to the database or filesystem)
+//                // System.out.println("Received picture: " + fileName + " (" + bytes.length + " bytes)");
+
             } catch (IOException e) {
                 loggerInfo.logException(e);
                 e.printStackTrace();
@@ -150,7 +166,7 @@ public class ServerApp {
     @PostMapping("/bidsForm")
     public ResponseEntity<String> addBid(@RequestHeader(name = "Authorization") String token, @RequestBody FinalBid bid,
                                          HttpServletRequest request) {
-        uri = currentUri(request.getRequestURL().toString(),"/bidsForm");
+        uri = currentUri(request.getRequestURL().toString(), "/bidsForm");
         System.out.println(uri);
         System.out.println(bid);
         int userId = getUserId(token);
@@ -187,8 +203,8 @@ public class ServerApp {
     }
 
     @PutMapping("/callUpdateAuction")
-    public ResponseEntity<String> updateAuction(Auction auction,HttpServletRequest request) {
-        uri = currentUri(request.getRequestURL().toString(),"/callUpdateAuction");
+    public ResponseEntity<String> updateAuction(Auction auction, HttpServletRequest request) {
+        uri = currentUri(request.getRequestURL().toString(), "/callUpdateAuction");
         System.out.println(uri);
         String newUri = uri + "/auctions";
         HttpEntity<Auction> requestEntity = new HttpEntity<>(auction);
@@ -199,8 +215,8 @@ public class ServerApp {
     }
 
     @DeleteMapping("/callDeleteAuction")
-    public ResponseEntity<String> deleteAuction(Auction auction,HttpServletRequest request) {
-        uri = currentUri(request.getRequestURL().toString(),"/callDeleteAuction");
+    public ResponseEntity<String> deleteAuction(Auction auction, HttpServletRequest request) {
+        uri = currentUri(request.getRequestURL().toString(), "/callDeleteAuction");
         System.out.println(uri);
         String newUri = uri + "/auctions";
         HttpEntity<Auction> requestEntity = new HttpEntity<>(auction);

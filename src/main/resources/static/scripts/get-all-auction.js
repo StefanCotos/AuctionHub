@@ -13,7 +13,7 @@ async function fetchAuctions() {
             auctionDiv.innerHTML = `
                                 <div class="card__img">
                                     <a href="auction-info.html?id=${auction.id}">
-                                        <img src="/images/${await getPhoto(auction.id)}" alt="Image with an auction">
+                                        <img src="${await getPhoto(auction.id)}" alt="Image with an auction">
                                     </a>
                                 </div>
                                 <h2>${auction.title}</h2>
@@ -79,12 +79,12 @@ async function getPhoto(id) {
         if (response.ok) {
             let image = await response.json();
             image = image[0];
-            return image.id + "." + image.extension;
+            return image.extension;
         } else {
-            return "null.jpeg";
+            return "http://res.cloudinary.com/hf7zswqct/image/upload/v1717375196/null.jpg";
         }
     } catch (error) {
-        return "null.jpeg";
+        return "http://res.cloudinary.com/hf7zswqct/image/upload/v1717375196/null.jpg";
     }
 }
 

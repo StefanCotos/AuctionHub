@@ -3,7 +3,7 @@ const auctionId = parseInt(urlParams.get('id'));
 
 async function fetchAuctions() {
     try {
-        const response = await fetch(window.location.origin+`/auctions/${auctionId}`);
+        const response = await fetch(window.location.origin + `/auctions/${auctionId}`);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -62,19 +62,26 @@ async function fetchAuctions() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', async function () {
+    const auctionDetailsContainer = document.getElementById("images-slide");
     try {
-        const response = await fetch(window.location.origin+`/imagesDatabase/auctions_id/${auctionId}`);
+        const response = await fetch(window.location.origin + `/imagesDatabase/auctions_id/${auctionId}`);
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            const auctionDiv = document.createElement('div');
+            auctionDiv.innerHTML = `
+                <div class="mySlides fade">
+                    <img src="http://res.cloudinary.com/hf7zswqct/image/upload/v1717375196/null.jpg" alt="Auction images" class="slides__image-card">
+                </div>
+            `;
+            auctionDetailsContainer.innerHTML=auctionDiv.innerHTML;
         }
         const auctions = await response.json();
-        const auctionDetailsContainer = document.getElementById("images-slide");
+        // const auctionDetailsContainer = document.getElementById("images-slide");
         for (const auction of auctions) {
             const auctionDiv = document.createElement('div');
             auctionDiv.innerHTML = `
                 <div class="mySlides fade">
-                    <img src="/images/${auction.id}.${auction.extension}" alt="Auction images" class="slides__image-card">
+                    <img src="${auction.extension}" alt="Auction images" class="slides__image-card">
                 </div>
             `;
             auctionDetailsContainer.appendChild(auctionDiv);
@@ -85,7 +92,13 @@ document.addEventListener('DOMContentLoaded', async function() {
         updatePrice();
         showSlides()
     } catch (error) {
-        console.error('There was a problem with the fetch operation:', error);
+        const auctionDiv = document.createElement('div');
+        auctionDiv.innerHTML = `
+                <div class="mySlides fade">
+                    <img src="http://res.cloudinary.com/hf7zswqct/image/upload/v1717375196/null.jpg" alt="Auction images" class="slides__image-card">
+                </div>
+            `;
+        auctionDetailsContainer.innerHTML=auctionDiv.innerHTML;
     }
 });
 
@@ -115,7 +128,7 @@ function showSlides(n) {
 
 async function getBid(id) {
     try {
-        const response = await fetch(window.location.origin+`/bids/auctions_id/${id}`);
+        const response = await fetch(window.location.origin + `/bids/auctions_id/${id}`);
         if (response.ok) {
             const bid = await response.json();
             return bid.price;
@@ -128,7 +141,7 @@ async function getBid(id) {
 }
 
 async function getUsername(id) {
-    const response = await fetch(window.location.origin+`/users/${id}`);
+    const response = await fetch(window.location.origin + `/users/${id}`);
     if (response.ok) {
         const user = await response.json();
         return user.username;
@@ -139,7 +152,7 @@ async function getUsername(id) {
 
 async function getBidder(id) {
     try {
-        const response = await fetch(window.location.origin+`/bids/auctions_id/${id}`);
+        const response = await fetch(window.location.origin + `/bids/auctions_id/${id}`);
         if (response.ok) {
             const bid = await response.json();
             return getUsername(bid.usersId);
@@ -150,7 +163,6 @@ async function getBidder(id) {
         return "none";
     }
 }
-
 
 
 function updatePrice() {
@@ -176,6 +188,7 @@ function updatePrice() {
         })
     });
 }
+
 //
 // window.onload = function () {
 //     fetchAuctions();
