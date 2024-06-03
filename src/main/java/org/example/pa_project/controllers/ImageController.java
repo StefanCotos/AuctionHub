@@ -47,4 +47,9 @@ public class ImageController {
     public void deleteImage(@PathVariable long id) {
         imageService.deleteImage(id);
     }
+
+    @DeleteMapping("/auctions_id/{auctionsId}")
+    public void deleteImageByAuctionsId(@PathVariable long auctionsId) {
+        imageService.deleteImageByAuctionsId(auctionsId);
+    }
 }

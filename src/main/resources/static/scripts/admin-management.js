@@ -55,6 +55,23 @@ async function fetch_auctions() {
 }
 
 async function removeUser(id) {
+    const response1 = await fetch(window.location.origin + `/bids/users_id/${id}`, {method: 'DELETE'});
+    if (response1.ok) {
+        console.log("Bid removed!")
+    } else {
+        return null;
+    }
+    const response2 = await fetch(window.location.origin + `/auctions/users_id/${id}`);
+    if (response2.ok) {
+        const auctions = await response2.json();
+        for (const auction of auctions){
+            await removeAuction(auction.id)
+        }
+        console.log("Auctions removed!");
+    } else {
+        return null;
+    }
+
     const response = await fetch(window.location.origin + `/users/${id}`, {method: 'DELETE'});
     if (response.ok) {
         alert("User removed!")
@@ -67,6 +84,18 @@ async function removeUser(id) {
 }
 
 async function removeAuction(id) {
+    const response1 = await fetch(window.location.origin + `/imagesDatabase/auctions_id/${id}`, {method: 'DELETE'});
+    if (response1.ok) {
+        console.log("Image removed!")
+    } else {
+        return null;
+    }
+    const response2 = await fetch(window.location.origin + `/bids/auctions_id/${id}`, {method: 'DELETE'});
+    if (response2.ok) {
+        console.log("Bid removed!")
+    } else {
+        return null;
+    }
     const response = await fetch(window.location.origin + `/auctions/${id}`, {method: 'DELETE'});
     if (response.ok) {
         alert("Auction removed!")
@@ -80,5 +109,5 @@ async function removeAuction(id) {
 
 window.onload = function () {
     fetch_users();
-    fetch_auctions()
+    fetch_auctions();
 };

@@ -65,8 +65,8 @@ CREATE TABLE IF NOT EXISTS `Auctions`
 (
     `id`
 )
-    ON DELETE CASCADE
-    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+        ON UPDATE NO ACTION
     ) ENGINE = InnoDB;
 
 -- Table `Bids`
@@ -113,8 +113,8 @@ CREATE TABLE IF NOT EXISTS `Final_Bids`
 (
     `id`
 )
-    ON DELETE CASCADE
-    ON UPDATE NO ACTION,
+    ON DELETE NO ACTION
+        ON UPDATE NO ACTION,
     CONSTRAINT `fk_Bids_Users`
     FOREIGN KEY
 (
@@ -124,8 +124,8 @@ CREATE TABLE IF NOT EXISTS `Final_Bids`
 (
     `id`
 )
-    ON DELETE CASCADE
-    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+        ON UPDATE NO ACTION
     ) ENGINE = InnoDB;
 
 -- Table `Image`
@@ -160,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `Images`
 (
     `id`
 )
-    ON DELETE CASCADE
+    ON DELETE NO ACTION
     ON UPDATE NO ACTION
     ) ENGINE = InnoDB;
 

@@ -1,6 +1,7 @@
 package org.example.pa_project.services;
 
 
+import jakarta.transaction.Transactional;
 import org.example.pa_project.entities.Auction;
 import org.example.pa_project.repositories.AuctionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,12 @@ public class AuctionService {
 
     public void deleteAuction(long id) {
         auctionRepository.deleteById(id);
+    }
+
+
+    @Transactional
+    public void deleteAuctionByUsersId(long usersId) {
+        auctionRepository.deleteByUsersId(usersId);
     }
 
 }

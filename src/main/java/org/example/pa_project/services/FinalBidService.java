@@ -1,5 +1,6 @@
 package org.example.pa_project.services;
 
+import jakarta.transaction.Transactional;
 import org.example.pa_project.entities.FinalBid;
 import org.example.pa_project.entities.User;
 import org.example.pa_project.repositories.FinalBidRepository;
@@ -47,7 +48,7 @@ public class FinalBidService {
         return finalBidRepository.findById(id).orElse(null);
     }
 
-    public FinalBid getFinalBidByAuctionId(long auctionsId) {
+    public FinalBid getFinalBidByAuctionsId(long auctionsId) {
         return finalBidRepository.findByAuctionsId(auctionsId);
     }
 
@@ -65,5 +66,15 @@ public class FinalBidService {
 
     public void deleteFinalBid(long id) {
         finalBidRepository.deleteById(id);
+    }
+
+    @Transactional
+    public void deleteFinalBidByUsersId(long usersId) {
+        finalBidRepository.deleteByUsersId(usersId);
+    }
+
+    @Transactional
+    public void deleteFinalBidAuctionsId(long auctionsId) {
+        finalBidRepository.deleteByAuctionsId(auctionsId);
     }
 }

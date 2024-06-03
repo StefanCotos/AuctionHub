@@ -1,5 +1,6 @@
 package org.example.pa_project.services;
 
+import jakarta.transaction.Transactional;
 import org.example.pa_project.entities.Image;
 import org.example.pa_project.repositories.ImageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,5 +44,10 @@ public class ImageService {
 
     public void deleteImage(long id) {
         imageRepository.deleteById(id);
+    }
+
+    @Transactional
+    public void deleteImageByAuctionsId(long auctionsId) {
+        imageRepository.deleteByAuctionsId(auctionsId);
     }
 }

@@ -29,7 +29,7 @@ public class FinalBidController {
 
     @GetMapping("/auctions_id/{auctionsId}")
     public FinalBid getBidByAuctionId(@PathVariable int auctionsId) {
-        return finalBidService.getFinalBidByAuctionId(auctionsId);
+        return finalBidService.getFinalBidByAuctionsId(auctionsId);
     }
 
     @PostMapping()
@@ -45,5 +45,15 @@ public class FinalBidController {
     @DeleteMapping("/{id}")
     public void deleteBid(@PathVariable int id) {
         finalBidService.deleteFinalBid(id);
+    }
+
+    @DeleteMapping("/users_id/{usersId}")
+    public void deleteBidByUsersId(@PathVariable int usersId) {
+        finalBidService.deleteFinalBidByUsersId(usersId);
+    }
+
+    @DeleteMapping("/auctions_id/{auctionsId}")
+    public void deleteBidByAuctionsId(@PathVariable int auctionsId) {
+        finalBidService.deleteFinalBidAuctionsId(auctionsId);
     }
 }

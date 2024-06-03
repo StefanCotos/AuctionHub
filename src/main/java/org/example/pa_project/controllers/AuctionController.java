@@ -29,7 +29,7 @@ public class AuctionController {
     }
 
     @GetMapping("/users_id/{usersId}")
-    public List<Auction> getBidByAuctionId(@PathVariable int usersId) {
+    public List<Auction> getAuctionByUsersId(@PathVariable int usersId) {
         return auctionService.getAuctionByUsersId(usersId);
     }
 
@@ -48,6 +48,11 @@ public class AuctionController {
     @DeleteMapping("/{id}")
     public void deleteAuction(@PathVariable int id) {
         auctionService.deleteAuction(id);
+    }
+
+    @DeleteMapping("/users_id/{usersId}")
+    public void deleteAuctionByUsersId(@PathVariable int usersId) {
+        auctionService.deleteAuctionByUsersId(usersId);
     }
 
 }

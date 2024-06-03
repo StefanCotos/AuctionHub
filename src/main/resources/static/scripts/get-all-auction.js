@@ -18,7 +18,7 @@ async function fetchAuctions() {
                                 </div>
                                 <h2>${auction.title}</h2>
                                 <h2>
-                                    <span id="price-${auction.id}">Strarting price: ${auction.initialPrice}$</span>
+                                    <span id="price-${auction.id}">Starting price: ${auction.initialPrice}$</span>
                                 </h2>
                                 <h4>Description</h4>
                                 <p>
