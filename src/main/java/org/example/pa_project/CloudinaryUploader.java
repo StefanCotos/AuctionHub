@@ -42,7 +42,7 @@ public class CloudinaryUploader {
 //        CloudinaryUploader uploader = new CloudinaryUploader();
 //        File file = new File("D:/Temporary Files/null.jpg");
 //        byte[] fileBytes = FileUtils.readFileToByteArray(file);
-//        String imageUrl = uploader.uploadFile(fileBytes, "test");
+//        String imageUrl = uploader.uploadFile(fileBytes, "null");
 //        System.out.println("Image URL: " + imageUrl);
 //    }
 }

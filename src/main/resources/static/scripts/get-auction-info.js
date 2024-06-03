@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             const auctionDiv = document.createElement('div');
             auctionDiv.innerHTML = `
                 <div class="mySlides fade">
-                    <img src="https://res.cloudinary.com/hf7zswqct/image/upload/v1717375196/null.jpg" alt="Auction images" class="slides__image-card">
+                    <img src="https://res.cloudinary.com/hbhejxvqj/image/upload/v1717421652/null.jpg" alt="Auction images" class="slides__image-card">
                 </div>
             `;
             auctionDetailsContainer.innerHTML=auctionDiv.innerHTML;
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         const auctionDiv = document.createElement('div');
         auctionDiv.innerHTML = `
                 <div class="mySlides fade">
-                    <img src="https://res.cloudinary.com/hf7zswqct/image/upload/v1717375196/null.jpg" alt="Auction images" class="slides__image-card">
+                    <img src="https://res.cloudinary.com/hbhejxvqj/image/upload/v1717421652/null.jpg" alt="Auction images" class="slides__image-card">
                 </div>
             `;
         auctionDetailsContainer.innerHTML=auctionDiv.innerHTML;

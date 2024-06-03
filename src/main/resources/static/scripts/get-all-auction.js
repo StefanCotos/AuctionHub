@@ -81,10 +81,10 @@ async function getPhoto(id) {
             image = image[0];
             return image.extension;
         } else {
-            return "https://res.cloudinary.com/hf7zswqct/image/upload/v1717375196/null.jpg";
+            return "https://res.cloudinary.com/hbhejxvqj/image/upload/v1717421652/null.jpg";
         }
     } catch (error) {
-        return "https://res.cloudinary.com/hf7zswqct/image/upload/v1717375196/null.jpg";
+        return "https://res.cloudinary.com/hbhejxvqj/image/upload/v1717421652/null.jpg";
     }
 }
 
