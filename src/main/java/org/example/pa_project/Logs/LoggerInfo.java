@@ -3,7 +3,9 @@ package org.example.pa_project.Logs;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/**
+ * This class handles logging operations for the application.
+ */
 public class LoggerInfo {
     private final Logger logger;
 
@@ -20,17 +22,19 @@ public class LoggerInfo {
     }
 
     /**
-     * Put in the logger the information about an exception
+     * Logs information about an exception.
+     *
+     * @param e The exception to be logged.
      */
     public void logException(Exception e) {
         this.logger.log(Level.SEVERE, "Exception: " + e.getMessage());
     }
 
     /**
-     * Put in the logger the information about the elapsed time
+     * Logs information about the execution time of a program.
      *
-     * @param startTime - when program start
-     * @param endTime   - when program stop
+     * @param startTime The time when the program started.
+     * @param endTime The time when the program ended.
      */
     public void logExecutionTime(long startTime, long endTime) {
         long executionTime = endTime - startTime;

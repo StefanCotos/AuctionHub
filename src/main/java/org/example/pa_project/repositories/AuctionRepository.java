@@ -9,11 +9,23 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+/**
+ * Repository interface for managing auctions.
+ */
 @Repository
 public interface AuctionRepository extends JpaRepository<Auction, Long> {
+    /**
+     * Finds all auctions by a user's ID.
+     *
+     * @param usersId the ID of the user
+     * @return a list of all auctions by the user
+     */
     List<Auction> findByUsersId(long usersId);
-
+    /**
+     * Deletes all auctions by a user's ID.
+     *
+     * @param usersId the ID of the user
+     */
     @Modifying
     @Transactional
     @Query("DELETE FROM Auction a WHERE a.usersId = :usersId")

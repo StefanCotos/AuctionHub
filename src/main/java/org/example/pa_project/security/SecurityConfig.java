@@ -49,6 +49,13 @@ public class SecurityConfig {
                 .authorizeHttpRequests(
                         req -> req.requestMatchers("/login/**", "/register/**", "/auctions/**", "/users/**", "/bids/**", "/imagesDatabase/**")
                                 .permitAll()
+                                .requestMatchers(
+                                        "/v1/api/get-token",
+                                        "/swagger-ui.html",
+                                        "/swagger-ui/*",
+                                        "/v3/api-docs/**",
+                                        "/swagger-resources/**",
+                                        "/webjars/**").permitAll()
                                 .requestMatchers("/swagger-ui/**", "/swagger-ui.html", "/swagger-ui", "/swagger-ui.html/**", "/v3/api-docs/**", "/v3/api-docs")
                                 .permitAll()
                                 .requestMatchers("/", "/about.html", "/admin.html", "/auction-info.html", "/auction-ma.html/**", "/auctions.html/**", "/contact.html", "/forget-up.html", "/help.html", "/my-auctions.html", "/login.html", "/signup.html")
