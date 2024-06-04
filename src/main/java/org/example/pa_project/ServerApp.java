@@ -22,9 +22,8 @@ import java.util.Comparator;
 import java.util.List;
 
 
-// dump comment
-@RestController
 
+@RestController
 @Tag(name = "ServerApp", description = "The main server application")
 public class ServerApp {
     public static LoggerInfo loggerInfo = new LoggerInfo();
