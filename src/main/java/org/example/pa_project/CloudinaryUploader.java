@@ -8,6 +8,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
+/**
+ * The class witch upload a photo in Cloudinary and return the link of the image
+ */
 public class CloudinaryUploader {
 
     private final Cloudinary cloudinary;
@@ -23,6 +26,12 @@ public class CloudinaryUploader {
                 "api_secret", apiSecret));
     }
 
+    /**
+     * Upload the file and return the link
+     * @param fileBytes - the bytes of the selected image
+     * @param publicId - the given name of the photo
+     * @return - the link
+     */
     public String uploadFile(byte[] fileBytes, String publicId) {
         try {
 
